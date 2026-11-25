@@ -152,21 +152,23 @@
   <section aria-label="Kaggle highlight">
     <h2>Kaggle highlight</h2>
     <div class="highlight">
-      <p class="rank">Predictive Modeling for Healthcare Costs in Vietnam — 23rd of 78 teams</p>
+      <p class="rank">Predictive Modeling for Healthcare Costs in Vietnam — 12th of 78 teams</p>
       <p>A complete competition run on Vietnamese social health insurance records: predicting a year
-        of individual healthcare cost (RMSE). Four submissions improved the public leaderboard score
-        from 2.69057 to <strong>2.28194</strong> (as of Nov 25, 2026). The gains came from feature
+        of individual healthcare cost (RMSE). Five submissions improved the public leaderboard score
+        from 2.69057 to <strong>2.25342</strong> (as of Nov 25, 2026). The gains came from feature
         engineering, not tuning: the target is exactly <code>log1p</code> of outpatient + inpatient
         cost and 81.7% of rows are zero, and households are split across train and test — so the
         winning features were <strong>leakage-safe household statistics</strong> (leave-one-out for
         training rows, recomputed inside each CV fold) and <strong>segment target encoding</strong>
-        over ID-prefix blocks.</p>
+        over ID-prefix blocks. A final round (v6) added household age-composition features and a
+        CatBoost hurdle model.</p>
       <table class="scores">
         <tr><th>Submission</th><th>Approach</th><th>Public LB RMSE</th></tr>
         <tr><td>v1</td><td>Gradient boosting on log1p(y)</td><td>2.69057</td></tr>
         <tr><td>v2</td><td>Poisson loss, raw scale</td><td>2.54565</td></tr>
         <tr><td>v3</td><td>Calibrated weighted blend</td><td>2.54577</td></tr>
         <tr><td>v4</td><td>Household + segment features, hurdle ensemble</td><td><strong>2.28194</strong></td></tr>
+        <tr><td>v6</td><td>Household age-composition features, CatBoost blend</td><td><strong>2.25342</strong></td></tr>
       </table>
       <p class="muted">Kaggle community competition (no prizes or medals) — entered as an end-to-end
         applied ML exercise in healthcare cost and utilization data, the domain I work in
