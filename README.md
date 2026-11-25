@@ -18,7 +18,7 @@ all data in them is public or synthetic.
 
 ## Kaggle
 
-- **Predictive Modeling for Healthcare Costs in Vietnam** (community competition) — **23rd of 78 teams**, public leaderboard RMSE **2.28194** (as of Nov 25, 2026). Four submissions improving 2.69057 → 2.28194, driven by leakage-safe household features and segment target encoding. [Writeup](https://github.com/wenchensheng/healthcare-cost-prediction/tree/main/kaggle-vietnam)
+- **Predictive Modeling for Healthcare Costs in Vietnam** (community competition) — **12th of 78 teams**, public leaderboard RMSE **2.25342** (as of Nov 25, 2026). Five submissions improving 2.69057 → 2.25342, driven by leakage-safe household features, segment target encoding, and household age-composition features with a CatBoost blend. [Writeup](https://github.com/wenchensheng/healthcare-cost-prediction/tree/main/kaggle-vietnam)
 
 ## Skills
 
